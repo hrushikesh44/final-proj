@@ -82,7 +82,7 @@ app.post('/signin', async(req, res) => {
     }
 })
 
-app.post('/enterdata', userMiddleware, async(req, res) => {
+app.post('/data', userMiddleware, async(req, res) => {
     const Id = req.body.Id;
 
     await IdModel.create({
@@ -106,7 +106,7 @@ app.get('/data', userMiddleware, async(req, res) => {
     })
 })
 
-app.put('/content', userMiddleware, async(req, res) => {
+app.put('/data', userMiddleware, async(req, res) => {
     const contentId = req.body.contentId;
 
     await IdModel.findOneAndDelete({
