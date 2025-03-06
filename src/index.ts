@@ -6,11 +6,11 @@ import { JWT_PASSWORD } from "./config";
 import { userMiddleware } from "./middleware";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import { z } from "zod"
+import { z } from "zod";
 
 const app = express();
 dotenv.config();
-const url: string = process.env.MONGODB_URI;
+const url = process.env.MONGODB_URI;
 
 app.use(express.json());
 app.use(cors());

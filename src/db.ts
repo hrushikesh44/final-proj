@@ -1,8 +1,8 @@
 import mongoose, { Schema, model } from "mongoose";
 
-const url: string = process.env.MONGODB_URI ;
+const url= process.env.MONGODB_URI ;
 
-mongoose.connect(url);
+mongoose.connect(url)
 
 const UserSchema = new Schema({
     username: {type: String, unique: true},
